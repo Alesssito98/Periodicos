@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 20px;
             color: rgb(255, 255, 255);
-            backgraund-color: rgb(20, 20, 20);
+            background-color: rgb(20, 20, 20);
         }
         img {
             max-width: 100%;
@@ -84,14 +84,14 @@ function filtros($sql, $link) {
 
     while ($arrayFiltro = pg_fetch_assoc($result)) {
         echo "<tr>";              
-        echo "<td style='border: 1px solid #E4CCE8; padding: 8px; max-width: 20%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['titulo'] . "</td>";
-        echo "<td style='border: 1px solid #E4CCE8; padding: 8px; max-width: 40%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['contenido'] . "</td>";
-        echo "<td style='border: 1px solid #E4CCE8; padding: 8px; max-width: 20%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['descripcion'] . "</td>";                      
-        echo "<td style='border: 1px solid #E4CCE8; padding: 8px; max-width: 10%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['categoria'] . "</td>";                       
-        echo "<td style='border: 1px solid #E4CCE8; padding: 8px; max-width: 10%; overflow: hidden; text-overflow: ellipsis;'><a href='" . $arrayFiltro['link'] . "' target='_blank'>" . $arrayFiltro['link'] . "</a></td>";                              
+        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 20%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['titulo'] . "</td>";
+        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 40%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['contenido'] . "</td>";
+        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 20%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['descripcion'] . "</td>";                      
+        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 10%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['categoria'] . "</td>";                       
+        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 10%; overflow: hidden; text-overflow: ellipsis;'><a href='" . $arrayFiltro['link'] . "' target='_blank'>" . $arrayFiltro['link'] . "</a></td>";                              
         $fecha = date_create($arrayFiltro['fpubli']);
         $fechaConversion = date_format($fecha, 'd-M-Y');
-        echo "<td style='border: 1px solid #E4CCE8; padding: 8px;'>" . $fechaConversion . "</td>";
+        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px;'>" . $fechaConversion . "</td>";
         echo "</tr>";  
     }
 
@@ -103,8 +103,8 @@ function filtros($sql, $link) {
 if (!$link) {
     die("Conexión fallida: " . pg_last_error());
 } else {
-    echo "<table style='border: 5px #E4CCE8 solid;'>";
-    echo "<tr><th><p style='color: #66E9D9;'>TITULO</p ></th><th><p style='color: #66E9D9;'>CONTENIDO</p ></th><th><p style='color: #66E9D9;'>DESCRIPCIÓN</p ></th><th><p style='color: #66E9D9;'>CATEGORÍA</p ></th><th><p style='color: #66E9D9;'>ENLACE</p ></th><th><p style='color: #66E9D9;'>FECHA DE PUBLICACIÓN</p ></th></tr><br>";
+    echo "<table style='border: 5pxrgb(126, 39, 141) solid;'>";
+    echo "<tr><th><p style='color:rgb(0, 0, 0);'>TITULO</p ></th><th><p style='color:rgb(0, 0, 0);'>CONTENIDO</p ></th><th><p style='rgb(0, 0, 0);'>DESCRIPCIÓN</p ></th><th><p style='color:rgb(0, 0, 0);'>CATEGORÍA</p ></th><th><p style='color: rgb(0, 0, 0);'>ENLACE</p ></th><th><p style='color: rgb(0, 0, 0);'>FECHA DE PUBLICACIÓN</p ></th></tr><br>";
 
     if (isset($_GET['filtrar'])) {
         $cat = isset($_GET["categoria"]) ? $_GET["categoria"] : '';
