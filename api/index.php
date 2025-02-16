@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Formulario de Filtro</title>
+    <title>Periódicos - Alex Gaggero</title>
 
     <style>
         body {
