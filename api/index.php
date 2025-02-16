@@ -9,15 +9,17 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            color: rgb(255, 255, 255);
+            backgraund-color: rgb(20, 20, 20);
         }
         img {
-            max-width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+            max-width: 100%;
             height: auto;
             display: block;
             margin-bottom: 10px;
         }
         a {
-            color: #1a0dab; /* Color de los enlaces */
+            color:rgb(129, 13, 171);
             text-decoration: none;
         }
         a:hover {
