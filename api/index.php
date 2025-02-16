@@ -104,7 +104,7 @@ if (!$link) {
     die("Conexión fallida: " . pg_last_error());
 } else {
     echo "<table style='border: 5pxrgb(126, 39, 141) solid;'>";
-    echo "<tr><th><p style='color:rgb(0, 0, 0);'>TITULO</p ></th><th><p style='color:rgb(0, 0, 0);'>CONTENIDO</p ></th><th><p style='rgb(0, 0, 0);'>DESCRIPCIÓN</p ></th><th><p style='color:rgb(0, 0, 0);'>CATEGORÍA</p ></th><th><p style='color: rgb(0, 0, 0);'>ENLACE</p ></th><th><p style='color: rgb(0, 0, 0);'>FECHA DE PUBLICACIÓN</p ></th></tr><br>";
+    echo "<tr><th><p style='color:rgb(255, 255, 255);'>TITULO</p ></th><th><p style='color:rgb(255, 255, 255);'>CONTENIDO</p ></th><th><p style='rgb(255, 255, 255);'>DESCRIPCIÓN</p ></th><th><p style='color:rgb(255, 255, 255);'>CATEGORÍA</p ></th><th><p style='color: rgb(255, 255, 255);'>ENLACE</p ></th><th><p style='color: rgb(255, 255, 255);'>FECHA DE PUBLICACIÓN</p ></th></tr><br>";
 
     if (isset($_GET['filtrar'])) {
         $cat = isset($_GET["categoria"]) ? $_GET["categoria"] : '';
