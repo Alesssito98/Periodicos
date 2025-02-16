@@ -19,7 +19,7 @@
             margin-bottom: 10px;
         }
         a {
-            color:rgb(129, 13, 171);
+            color:rgb(171, 142, 13);
             text-decoration: none;
         }
         a:hover {
@@ -84,14 +84,14 @@ function filtros($sql, $link) {
 
     while ($arrayFiltro = pg_fetch_assoc($result)) {
         echo "<tr>";              
-        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 20%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['titulo'] . "</td>";
-        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 40%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['contenido'] . "</td>";
-        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 20%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['descripcion'] . "</td>";                      
-        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 10%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['categoria'] . "</td>";                       
-        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px; max-width: 10%; overflow: hidden; text-overflow: ellipsis;'><a href='" . $arrayFiltro['link'] . "' target='_blank'>" . $arrayFiltro['link'] . "</a></td>";                              
+        echo "<td style='border: 1px solid rgb(171, 142, 13); padding: 8px; max-width: 20%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['titulo'] . "</td>";
+        echo "<td style='border: 1px solid rgb(171, 142, 13); padding: 8px; max-width: 40%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['contenido'] . "</td>";
+        echo "<td style='border: 1px solid rgb(171, 142, 13); padding: 8px; max-width: 20%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['descripcion'] . "</td>";                      
+        echo "<td style='border: 1px solid rgb(171, 142, 13); padding: 8px; max-width: 10%; overflow: hidden; text-overflow: ellipsis;'>" . $arrayFiltro['categoria'] . "</td>";                       
+        echo "<td style='border: 1px solid rgb(171, 142, 13); padding: 8px; max-width: 10%; overflow: hidden; text-overflow: ellipsis;'><a href='" . $arrayFiltro['link'] . "' target='_blank'>" . $arrayFiltro['link'] . "</a></td>";                              
         $fecha = date_create($arrayFiltro['fpubli']);
         $fechaConversion = date_format($fecha, 'd-M-Y');
-        echo "<td style='border: 1px solid rgb(129, 13, 171); padding: 8px;'>" . $fechaConversion . "</td>";
+        echo "<td style='border: 1px solid rgb(171, 142, 13); padding: 8px;'>" . $fechaConversion . "</td>";
         echo "</tr>";  
     }
 
